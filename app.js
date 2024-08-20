@@ -5,6 +5,7 @@ const indexRoute = require('./Routes/indexRoute')
 const vacationRoute = require('./Routes/vacationRoute')
 const historyRoute = require('./Routes/historyRoute')
 const triviaRoute = require('./Routes/triviaRoute')
+const spotRoute = require('./Routes/spotsRoute')
 
 const app = express()
 app.engine('ejs', engine);
@@ -16,6 +17,8 @@ app.use('/',indexRoute)
 app.use('/',vacationRoute)
 app.use('/',historyRoute)
 app.use('/',triviaRoute)
+app.use('/',spotRoute)
+
 
 const port = 3000
 app.listen(port,()=>{
